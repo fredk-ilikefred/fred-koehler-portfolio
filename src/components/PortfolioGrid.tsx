@@ -18,7 +18,6 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onSelectPiece }) =
             key={item.id}
             type="button"
             className="portfolio-card"
-            style={{ aspectRatio: item.aspectRatio }}
             onClick={() => onSelectPiece(item, index)}
             aria-haspopup="dialog"
             aria-label={`Open larger view of ${item.title}`}
