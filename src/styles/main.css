@@ -317,7 +317,7 @@ button {
 }
 
 .book-cover-img {
-  height: clamp(230px, 25vw, 370px);
+  height: clamp(160px, 16vw, 230px);
   width: auto;
   max-width: none;
   max-height: none;
@@ -346,25 +346,26 @@ button {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: 8px;
+  gap: 12px;
 }
 
 .portfolio-card {
   position: relative;
   flex: 0 0 auto;
-  height: clamp(128px, 16vw, 226px);
+  height: clamp(120px, 14vw, 190px);
   overflow: visible;
+  padding: 0;
   text-align: left;
   display: block;
   background: transparent;
-  border: 0;
+  border: 1px solid rgba(28, 26, 24, 0.12);
   border-radius: 0;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .portfolio-card:focus-visible {
-  outline: 3px solid var(--color-seafoam);
-  outline-offset: 4px;
+  outline: 2px solid var(--color-seafoam);
+  outline-offset: 3px;
   z-index: 2;
 }
 
@@ -377,9 +378,10 @@ button {
 
 @media (hover: hover) and (pointer: fine) {
   .portfolio-card:hover {
-    transform: scale(1.035);
+    transform: scale(1.03);
     z-index: 2;
-    box-shadow: 0 0 0 3px var(--color-seafoam), 0 10px 24px rgba(28, 26, 24, 0.16);
+    border-color: var(--color-seafoam);
+    box-shadow: 0 6px 18px rgba(28, 26, 24, 0.12);
   }
 }
 
