@@ -344,14 +344,23 @@ button {
 /* PORTFOLIO GRID */
 .portfolio-grid {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  flex-direction: column;
   gap: 6px;
+  width: 100%;
+}
+
+.portfolio-row {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+  align-items: flex-start;
 }
 
 .portfolio-card {
   position: relative;
-  flex: 0 0 auto;
+  flex-basis: 0;
+  flex-shrink: 1;
+  min-width: 0;
   overflow: visible;
   padding: 0;
   text-align: left;
@@ -369,16 +378,15 @@ button {
 }
 
 .portfolio-thumb {
-  height: clamp(120px, 14vw, 190px);
-  width: auto;
-  max-width: none;
-  max-height: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .portfolio-card:hover {
-    transform: scale(1.03);
+    transform: scale(1.025);
     z-index: 2;
     box-shadow: 0 0 0 2px var(--color-seafoam), 0 6px 18px rgba(28, 26, 24, 0.12);
   }
