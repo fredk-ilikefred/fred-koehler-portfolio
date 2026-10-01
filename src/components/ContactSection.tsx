@@ -12,7 +12,7 @@ export const ContactSection: React.FC = () => {
     <section id="contact" className="section-container" aria-labelledby="contact-heading">
       <div className="section-heading-wrap">
         <span className="section-eyebrow">Representation &amp; Inquiries</span>
-        <h2 id="contact-heading" className="section-heading">Get in Touch</h2>
+        <h2 id="contact-heading" className="sr-only">Representation &amp; Inquiries</h2>
         <p className="section-description">
           Whether you are an art director looking for your next picture-book collaborator, an editor
           interested in acquired rights, a librarian planning a school assembly, or a young reader
@@ -64,23 +64,27 @@ export const ContactSection: React.FC = () => {
       </div>
 
       <div className="contact-layout">
-        <aside className="author-headshot-box" aria-label="Author Portrait Placeholder">
-          <div className="headshot-frame">
-            <svg className="headshot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-              <circle cx="12" cy="7" r="4" />
-            </svg>
-            <p className="headshot-caption-main">Fred Koehler</p>
-            <p className="headshot-caption-sub">
-              Approved author headshot placeholder
-              <br />
-              (Reserved for high-resolution portrait from Drive)
+        <aside className="author-bio-card" aria-label="About Fred Koehler">
+          <div className="author-bio-header">
+            <span className="author-bio-kicker">About the Author &amp; Illustrator</span>
+            <h3 className="author-bio-name">Fred Koehler</h3>
+          </div>
+          <div className="author-bio-body">
+            <p>
+              Fred Koehler is an artist, novelist, and screenwriter whose real-life misadventures include
+              sunken boats, shark encounters, and narrow escapes from hurricanes. Whether freediving in the
+              Gulf of Mexico or backpacking across Africa, Fred’s sense of adventure and awe of nature overflow
+              into his characters’ stories.
+            </p>
+            <p>
+              His published works include the illustrated novel <em>Garbage Island</em>, the Boston Globe-Horn Book
+              honoree <em>One Day, The End</em>, and the New York Public Library Best of the Year{' '}
+              <em>Flashlight Night</em>, among others.
+            </p>
+            <p className="author-bio-closer">
+              Fred lives in Florida with his wife, kids, and a rescue dog named Cheerio Mutt-Face McChubbybutt.
             </p>
           </div>
-          <p className="author-note">
-            Artist, writer, and adventurer based in Florida. When not drawing or writing, he can often
-            be found scuba diving, camping, or exploring the outdoors.
-          </p>
         </aside>
 
         <div className="contact-form-stage">
@@ -155,7 +159,8 @@ export const Footer: React.FC = () => {
         <div className="footer-links">
           <a href="#hero">Back to Top ↑</a>
           <a href="#books">Books</a>
-          <a href="#portfolio">Work</a>
+          <a href="#artwork">Artwork</a>
+          <a href="#wip">Work in Progress</a>
           <a href="#contact">Contact</a>
         </div>
         <span>All original artwork © Fred Koehler. Used with permission.</span>

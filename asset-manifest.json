@@ -5,7 +5,7 @@
     "folderUrl": "https://drive.google.com/drive/folders/10J184IuOfNq08eZz6_l0IW5xoLB58uIh?usp=drive_link",
     "handling": "Immutable source files: downloaded byte-for-byte for responsive display only; never modified, retouched, upscaled, recolored, or used with image-generation/editing tools."
   },
-  "assetCount": 33,
+  "assetCount": 36,
   "assets": [
     {
       "id": "1aMHJ1HIMWiURXhsnitHANH5raHG8gH65",
@@ -498,6 +498,51 @@
       "dimensions": {
         "width": 1400,
         "height": 451,
+        "format": "JPEG"
+      },
+      "integrity": "Original Drive download; no image transformation applied."
+    },
+    {
+      "id": "1uzQeru00AF0nojp9eGxQTxcsWOWVPQev",
+      "sourceName": "header-v3b.jpg",
+      "localPath": "public/assets/header/header-v3b.jpg",
+      "section": "hero",
+      "displayTitle": "Hero artwork v3b",
+      "byteSize": 72505,
+      "sha256": "1145d1944af9f84d0940297885cbd5b7dbb58c409772f7b5af12b689c6627e2e",
+      "dimensions": {
+        "width": 1300,
+        "height": 354,
+        "format": "JPEG"
+      },
+      "integrity": "Original Drive download; no image transformation applied."
+    },
+    {
+      "id": "13eZlyj_qAtIZf18cktpAk5WYkrWI3e91",
+      "sourceName": "books-novels-for-mockup-TFG.jpg",
+      "localPath": "public/assets/wip/the-faerie-godfather.jpg",
+      "section": "wip",
+      "displayTitle": "The Faerie Godfather artwork",
+      "byteSize": 91805,
+      "sha256": "c0509efcf9a6836c04f5fc40ed30ced00e66290e870c5c9a540946e0f2a76a72",
+      "dimensions": {
+        "width": 1000,
+        "height": 292,
+        "format": "JPEG"
+      },
+      "integrity": "Original Drive download; no image transformation applied."
+    },
+    {
+      "id": "13PRnZvnbZq0FUpJ4ntRCyh0wXhy5EQBg",
+      "sourceName": "unsinkable-in-progress.jpg",
+      "localPath": "public/assets/wip/the-unsinkable.jpg",
+      "section": "wip",
+      "displayTitle": "The Unsinkable artwork",
+      "byteSize": 122197,
+      "sha256": "7baa375a88324753aff7cbdf55b775f2b073ac57e10b7dfa001197b95f333dcc",
+      "dimensions": {
+        "width": 1000,
+        "height": 317,
         "format": "JPEG"
       },
       "integrity": "Original Drive download; no image transformation applied."

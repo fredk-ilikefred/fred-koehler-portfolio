@@ -1,21 +1,3 @@
-export interface AssetDimension {
-  width: number
-  height: number
-  format: string
-}
-
-export interface ManifestAsset {
-  id: string
-  sourceName: string
-  localPath: string
-  section: 'hero' | 'books' | 'portfolio'
-  displayTitle: string
-  byteSize: number
-  sha256: string
-  dimensions: AssetDimension
-  integrity: string
-}
-
 export interface BookItem {
   id: string
   title: string
@@ -24,8 +6,8 @@ export interface BookItem {
   width: number
   height: number
   aspectRatio: number
-  role: string
-  category: 'Picture Book' | 'Middle Grade' | 'Illustrated Novel'
+  role?: string
+  category?: string
   year?: string
   publisher?: string
 }
@@ -40,21 +22,24 @@ export interface PortfolioItem {
   aspectRatio: number
 }
 
-export interface WipItem {
+export interface WipProject {
   id: string
   title: string
   category: string
   pitch: string
-  artOrientation: 'left' | 'right'
-  status: string
-  placeholderType: 'sketch-spread' | 'middle-grade' | 'fantasy-adventure' | 'character-sheet'
+  readerfulUrl: string
+  artSrc: string
+  artWidth: number
+  artHeight: number
+  artAlt: string
+  reverseLayout?: boolean
 }
 
 export const HERO_ASSET = {
-  src: '/assets/header/header-v2.jpg',
-  sourceName: 'header-v2.jpg',
-  width: 1400,
-  height: 451,
+  src: '/assets/header/header-v3b.jpg',
+  sourceName: 'header-v3b.jpg',
+  width: 1300,
+  height: 354,
   integrity: 'Original Drive download; unaltered byte-for-byte asset.',
 }
 
@@ -64,22 +49,22 @@ export const PUBLISHED_BOOKS: BookItem[] = [
     title: 'Garbage Island',
     filename: 'garbage-island-cover.jpg',
     src: '/assets/book-covers/garbage-island-cover.jpg',
-    width: 600,
-    height: 924,
-    aspectRatio: 600 / 924,
+    width: 1791,
+    height: 2550,
+    aspectRatio: 1791 / 2550,
     role: 'Author & Illustrator',
     category: 'Middle Grade',
     year: '2019',
-    publisher: 'Mixtape Press / Boyds Mills & Kane',
+    publisher: 'Boyds Mills Press / Kane Miller',
   },
   {
     id: 'one-day-the-end',
     title: 'One Day, The End',
     filename: 'ODTE-COVER.jpg',
     src: '/assets/book-covers/ODTE-COVER.jpg',
-    width: 800,
-    height: 800,
-    aspectRatio: 1,
+    width: 2392,
+    height: 2560,
+    aspectRatio: 2392 / 2560,
     role: 'Illustrator',
     category: 'Picture Book',
     year: '2015',
@@ -90,9 +75,9 @@ export const PUBLISHED_BOOKS: BookItem[] = [
     title: 'How to Cheer Up Dad',
     filename: 'cover-6-21-16b.jpg',
     src: '/assets/book-covers/cover-6-21-16b.jpg',
-    width: 800,
-    height: 792,
-    aspectRatio: 800 / 792,
+    width: 600,
+    height: 600,
+    aspectRatio: 1,
     role: 'Author & Illustrator',
     category: 'Picture Book',
     year: '2014',
@@ -103,9 +88,9 @@ export const PUBLISHED_BOOKS: BookItem[] = [
     title: 'Super Jumbo',
     filename: 'super-jumbo-cover.jpg',
     src: '/assets/book-covers/super-jumbo-cover.jpg',
-    width: 800,
-    height: 796,
-    aspectRatio: 800 / 796,
+    width: 2000,
+    height: 1991,
+    aspectRatio: 2000 / 1991,
     role: 'Author & Illustrator',
     category: 'Picture Book',
     year: '2016',
@@ -116,9 +101,9 @@ export const PUBLISHED_BOOKS: BookItem[] = [
     title: 'Flashlight Night',
     filename: 'flashight-night.jpg',
     src: '/assets/book-covers/flashight-night.jpg',
-    width: 900,
-    height: 1045,
-    aspectRatio: 900 / 1045,
+    width: 1600,
+    height: 1305,
+    aspectRatio: 1600 / 1305,
     role: 'Illustrator',
     category: 'Picture Book',
     year: '2017',
@@ -129,9 +114,9 @@ export const PUBLISHED_BOOKS: BookItem[] = [
     title: 'This Book Is NOT About Dragons',
     filename: 'not-about-dragons-cover.jpg',
     src: '/assets/book-covers/not-about-dragons-cover.jpg',
-    width: 600,
-    height: 735,
-    aspectRatio: 600 / 735,
+    width: 730,
+    height: 659,
+    aspectRatio: 730 / 659,
     role: 'Illustrator',
     category: 'Picture Book',
     year: '2017',
@@ -142,110 +127,100 @@ export const PUBLISHED_BOOKS: BookItem[] = [
     title: 'What If? Then We…',
     filename: 'whatif-cover.jpg',
     src: '/assets/book-covers/whatif-cover.jpg',
-    width: 600,
-    height: 600,
-    aspectRatio: 1,
-    role: 'Illustrator',
-    category: 'Picture Book',
-    year: '2020',
-    publisher: 'Peachtree Publishing',
-  },
-  {
-    id: 'puppy-puppy-puppy',
-    title: 'Puppy, Puppy, Puppy',
-    filename: 'book-cover.jpg',
-    src: '/assets/book-covers/book-cover.jpg',
-    width: 1000,
-    height: 1000,
-    aspectRatio: 1,
+    width: 1500,
+    height: 1513,
+    aspectRatio: 1500 / 1513,
     role: 'Illustrator',
     category: 'Picture Book',
     year: '2018',
     publisher: 'Boyds Mills Press',
   },
   {
+    id: 'puppy-and-piggy',
+    title: 'Puppy and Piggy',
+    filename: 'book-cover.jpg',
+    src: '/assets/book-covers/book-cover.jpg',
+    width: 2700,
+    height: 2700,
+    aspectRatio: 1,
+    role: 'Illustrator',
+    category: 'Early Reader / Picture Book',
+    year: '2020',
+  },
+  {
     id: 'skunk-squad',
     title: 'Skunk Squad',
     filename: 'skunk-squad.jpg',
     src: '/assets/book-covers/skunk-squad.jpg',
-    width: 648,
-    height: 948,
-    aspectRatio: 648 / 948,
+    width: 1014,
+    height: 1500,
+    aspectRatio: 1014 / 1500,
     role: 'Author & Illustrator',
-    category: 'Middle Grade',
+    category: 'Early Graphic Novel',
+    year: '2021',
   },
   {
     id: 'undercover-iguana',
     title: 'Undercover Iguana',
     filename: 'undercover-iguana.jpg',
     src: '/assets/book-covers/undercover-iguana.jpg',
-    width: 648,
-    height: 948,
-    aspectRatio: 648 / 948,
+    width: 1014,
+    height: 1500,
+    aspectRatio: 1014 / 1500,
     role: 'Author & Illustrator',
     category: 'Middle Grade',
   },
 ]
 
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
-  { id: 'portfolio-01', title: 'Selected Work 01', filename: 'Untitled_Artwork-8.jpg', src: '/assets/portfolio/Untitled_Artwork-8.jpg', width: 1000, height: 1000, aspectRatio: 1 },
-  { id: 'portfolio-02', title: 'Selected Work 02', filename: 'Untitled_Artwork-47.jpg', src: '/assets/portfolio/Untitled_Artwork-47.jpg', width: 750, height: 1000, aspectRatio: 0.75 },
+  { id: 'portfolio-01', title: 'Selected Artwork 01', filename: 'Untitled_Artwork-8.jpg', src: '/assets/portfolio/Untitled_Artwork-8.jpg', width: 1000, height: 1000, aspectRatio: 1 },
+  { id: 'portfolio-02', title: 'Selected Artwork 02', filename: 'Untitled_Artwork-47.jpg', src: '/assets/portfolio/Untitled_Artwork-47.jpg', width: 750, height: 1000, aspectRatio: 0.75 },
   { id: 'portfolio-03', title: 'Unsinkable Study', filename: 'Unsinkable-1-v2.jpg', src: '/assets/portfolio/Unsinkable-1-v2.jpg', width: 1000, height: 1432, aspectRatio: 1000 / 1432 },
-  { id: 'portfolio-04', title: 'Selected Work 04', filename: 'Untitled_Artwork-45.jpg', src: '/assets/portfolio/Untitled_Artwork-45.jpg', width: 1000, height: 750, aspectRatio: 1000 / 750 },
-  { id: 'portfolio-05', title: 'Selected Work 05', filename: 'Untitled_Artwork-27.jpg', src: '/assets/portfolio/Untitled_Artwork-27.jpg', width: 1500, height: 969, aspectRatio: 1500 / 969 },
-  { id: 'portfolio-06', title: 'Selected Work 06', filename: 'Untitled_Artwork-28.jpg', src: '/assets/portfolio/Untitled_Artwork-28.jpg', width: 1500, height: 664, aspectRatio: 1500 / 664 },
+  { id: 'portfolio-04', title: 'Selected Artwork 04', filename: 'Untitled_Artwork-45.jpg', src: '/assets/portfolio/Untitled_Artwork-45.jpg', width: 1000, height: 750, aspectRatio: 1000 / 750 },
+  { id: 'portfolio-05', title: 'Selected Artwork 05', filename: 'Untitled_Artwork-27.jpg', src: '/assets/portfolio/Untitled_Artwork-27.jpg', width: 1500, height: 969, aspectRatio: 1500 / 969 },
+  { id: 'portfolio-06', title: 'Selected Artwork 06', filename: 'Untitled_Artwork-28.jpg', src: '/assets/portfolio/Untitled_Artwork-28.jpg', width: 1500, height: 664, aspectRatio: 1500 / 664 },
   { id: 'portfolio-07', title: 'Working Process Study', filename: 'working-2.jpg', src: '/assets/portfolio/working-2.jpg', width: 1500, height: 750, aspectRatio: 2 },
-  { id: 'portfolio-08', title: 'Selected Work 08', filename: 'Untitled_Artwork-13.jpg', src: '/assets/portfolio/Untitled_Artwork-13.jpg', width: 1500, height: 667, aspectRatio: 1500 / 667 },
-  { id: 'portfolio-09', title: 'Selected Work 09', filename: 'Untitled_Artwork-9.jpg', src: '/assets/portfolio/Untitled_Artwork-9.jpg', width: 1000, height: 985, aspectRatio: 1000 / 985 },
+  { id: 'portfolio-08', title: 'Selected Artwork 08', filename: 'Untitled_Artwork-13.jpg', src: '/assets/portfolio/Untitled_Artwork-13.jpg', width: 1500, height: 667, aspectRatio: 1500 / 667 },
+  { id: 'portfolio-09', title: 'Selected Artwork 09', filename: 'Untitled_Artwork-9.jpg', src: '/assets/portfolio/Untitled_Artwork-9.jpg', width: 1000, height: 985, aspectRatio: 1000 / 985 },
   { id: 'portfolio-10', title: 'Studio Drawing Sheet A', filename: 'SKM_C300i26051814030.jpg', src: '/assets/portfolio/SKM_C300i26051814030.jpg', width: 2932, height: 3090, aspectRatio: 2932 / 3090 },
   { id: 'portfolio-11', title: 'Studio Drawing Sheet B', filename: 'SKM_C300i26051814060.jpg', src: '/assets/portfolio/SKM_C300i26051814060.jpg', width: 1998, height: 3268, aspectRatio: 1998 / 3268 },
-  { id: 'portfolio-12', title: 'Selected Illustration 12', filename: '9.jpg', src: '/assets/portfolio/9.jpg', width: 6475, height: 3325, aspectRatio: 6475 / 3325 },
-  { id: 'portfolio-13', title: 'Selected Illustration 13', filename: '010.jpg', src: '/assets/portfolio/010.jpg', width: 5700, height: 2850, aspectRatio: 2 },
-  { id: 'portfolio-14', title: 'Selected Illustration 14', filename: '7.jpg', src: '/assets/portfolio/7.jpg', width: 5550, height: 2850, aspectRatio: 5550 / 2850 },
-  { id: 'portfolio-15', title: 'Selected Illustration 15', filename: '8.jpg', src: '/assets/portfolio/8.jpg', width: 6150, height: 2850, aspectRatio: 6150 / 2850 },
-  { id: 'portfolio-16', title: 'Selected Story Spread 16', filename: '2.jpg', src: '/assets/portfolio/2.jpg', width: 1000, height: 422, aspectRatio: 1000 / 422 },
-  { id: 'portfolio-17', title: 'Selected Story Spread 17', filename: '1.jpg', src: '/assets/portfolio/1.jpg', width: 1000, height: 422, aspectRatio: 1000 / 422 },
-  { id: 'portfolio-18', title: 'Selected Story Spread 18', filename: '4.jpg', src: '/assets/portfolio/4.jpg', width: 2500, height: 1250, aspectRatio: 2 },
-  { id: 'portfolio-19', title: 'Selected Story Spread 19', filename: '5.jpg', src: '/assets/portfolio/5.jpg', width: 2500, height: 1250, aspectRatio: 2 },
-  { id: 'portfolio-20', title: 'Selected Story Spread 20', filename: '6.jpg', src: '/assets/portfolio/6.jpg', width: 2500, height: 1250, aspectRatio: 2 },
-  { id: 'portfolio-21', title: 'Selected Story Spread 21', filename: '3.jpg', src: '/assets/portfolio/3.jpg', width: 2500, height: 1250, aspectRatio: 2 },
+  { id: 'portfolio-12', title: 'Selected Artwork 12', filename: '9.jpg', src: '/assets/portfolio/9.jpg', width: 6475, height: 3325, aspectRatio: 6475 / 3325 },
+  { id: 'portfolio-13', title: 'Selected Artwork 13', filename: '010.jpg', src: '/assets/portfolio/010.jpg', width: 5700, height: 2850, aspectRatio: 2 },
+  { id: 'portfolio-14', title: 'Selected Artwork 14', filename: '7.jpg', src: '/assets/portfolio/7.jpg', width: 5550, height: 2850, aspectRatio: 5550 / 2850 },
+  { id: 'portfolio-15', title: 'Selected Artwork 15', filename: '8.jpg', src: '/assets/portfolio/8.jpg', width: 6150, height: 2850, aspectRatio: 6150 / 2850 },
+  { id: 'portfolio-16', title: 'Selected Artwork 16', filename: '2.jpg', src: '/assets/portfolio/2.jpg', width: 1000, height: 422, aspectRatio: 1000 / 422 },
+  { id: 'portfolio-17', title: 'Selected Artwork 17', filename: '1.jpg', src: '/assets/portfolio/1.jpg', width: 1000, height: 422, aspectRatio: 1000 / 422 },
+  { id: 'portfolio-18', title: 'Selected Artwork 18', filename: '4.jpg', src: '/assets/portfolio/4.jpg', width: 2500, height: 1250, aspectRatio: 2 },
+  { id: 'portfolio-19', title: 'Selected Artwork 19', filename: '5.jpg', src: '/assets/portfolio/5.jpg', width: 2500, height: 1250, aspectRatio: 2 },
+  { id: 'portfolio-20', title: 'Selected Artwork 20', filename: '6.jpg', src: '/assets/portfolio/6.jpg', width: 2500, height: 1250, aspectRatio: 2 },
+  { id: 'portfolio-21', title: 'Selected Artwork 21', filename: '3.jpg', src: '/assets/portfolio/3.jpg', width: 2500, height: 1250, aspectRatio: 2 },
 ]
 
-export const WIP_ITEMS: WipItem[] = [
+export const WIP_PROJECTS: WipProject[] = [
   {
-    id: 'mythic-airlines',
-    title: 'Mythic Airlines',
+    id: 'the-faerie-godfather',
+    title: 'The Faerie Godfather',
     category: 'Middle Grade Adventure · Illustrated Fiction',
-    pitch: 'Where legendary creatures run the skies and every flight is an expedition into unknown airspace. An unexpected and thrilling exploration of human and fantasy figures from a middle-grade perspective.',
-    artOrientation: 'left',
-    status: 'Rights Available',
-    placeholderType: 'sketch-spread',
+    pitch:
+      'Miriam Lockhart never believed in faeries—until they killed her. Now trapped in the faerie realm as a wandering spirit (and none too happy about it), Miriam must discover her unfinished business or remain a ghost forever.',
+    readerfulUrl: 'https://readerful.com/story/the-faerie-godfather-UgAjuYBT',
+    artSrc: '/assets/wip/the-faerie-godfather.jpg',
+    artWidth: 1000,
+    artHeight: 292,
+    artAlt: 'Original panoramic artwork for The Faerie Godfather by Fred Koehler',
+    reverseLayout: false,
   },
   {
-    id: 'wip-picture-book',
-    title: 'New Picture Book Project',
-    category: 'Picture Book · Ages 4–8',
-    pitch: 'A heartwarming story about oversized friendships, small acts of bravery, and finding your way home across an impossible landscape. Ready for book-dummy review.',
-    artOrientation: 'right',
-    status: 'Rights Available',
-    placeholderType: 'fantasy-adventure',
-  },
-  {
-    id: 'wip-middle-grade',
-    title: 'New Middle Grade Adventure',
-    category: 'Middle Grade · Ages 8–12',
-    pitch: 'Brave kids, ancient maps, and a quest that could change everything. Built for readers who love fast-moving humor, sea spray, and high-stakes teamwork.',
-    artOrientation: 'left',
-    status: 'Rights Available',
-    placeholderType: 'middle-grade',
-  },
-  {
-    id: 'character-world',
-    title: 'Character World & Concept Sheets',
-    category: 'Visual Development · Character Series',
-    pitch: 'A cast of curious, expressive characters developed for licensing, graphic novels, and upcoming manuscripts. Model sheets, expression grids, and thumbnail stories.',
-    artOrientation: 'right',
-    status: 'Rights Available',
-    placeholderType: 'character-sheet',
+    id: 'the-unsinkable',
+    title: 'The Unsinkable',
+    category: 'Middle Grade Adventure · Illustrated Fiction',
+    pitch:
+      "To keep his family afloat, a fisherman's son takes out his father's boat and gets lost in the Gulf of Mexico.",
+    readerfulUrl: 'https://readerful.com/story/the-unsinkable-7GZj0kC3',
+    artSrc: '/assets/wip/the-unsinkable.jpg',
+    artWidth: 1000,
+    artHeight: 317,
+    artAlt: 'Original comic spread artwork for The Unsinkable by Fred Koehler',
+    reverseLayout: true,
   },
 ]

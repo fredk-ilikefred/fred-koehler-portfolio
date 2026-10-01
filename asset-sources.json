@@ -236,6 +236,27 @@
       "localPath": "public/assets/header/header-v2.jpg",
       "section": "hero",
       "displayTitle": "Hero artwork v2"
+    },
+    {
+      "id": "1uzQeru00AF0nojp9eGxQTxcsWOWVPQev",
+      "sourceName": "header-v3b.jpg",
+      "localPath": "public/assets/header/header-v3b.jpg",
+      "section": "hero",
+      "displayTitle": "Hero artwork v3b"
+    },
+    {
+      "id": "13eZlyj_qAtIZf18cktpAk5WYkrWI3e91",
+      "sourceName": "books-novels-for-mockup-TFG.jpg",
+      "localPath": "public/assets/wip/the-faerie-godfather.jpg",
+      "section": "wip",
+      "displayTitle": "The Faerie Godfather artwork"
+    },
+    {
+      "id": "13PRnZvnbZq0FUpJ4ntRCyh0wXhy5EQBg",
+      "sourceName": "unsinkable-in-progress.jpg",
+      "localPath": "public/assets/wip/the-unsinkable.jpg",
+      "section": "wip",
+      "displayTitle": "The Unsinkable artwork"
     }
   ]
 }

@@ -27,7 +27,8 @@ export const BooksShelf: React.FC = () => {
   return (
     <section id="books" className="section-container" aria-labelledby="books-heading">
       <div className="section-heading-wrap">
-        <h2 id="books-heading" className="section-heading">Published Books</h2>
+        <span className="section-eyebrow">Published Books</span>
+        <h2 id="books-heading" className="sr-only">Published Books</h2>
       </div>
 
       <div className="books-shelf-wrapper">
@@ -53,9 +54,6 @@ export const BooksShelf: React.FC = () => {
                 loading="lazy"
                 decoding="async"
               />
-              <div className="book-meta">
-                <h3 className="book-title">{book.title}</h3>
-              </div>
             </article>
           ))}
         </div>

@@ -32,7 +32,7 @@ const resolveRows = (order: readonly (readonly string[])[]): PortfolioItem[][] =
   order.map((row) =>
     row.map((id) => {
       const item = portfolioById.get(id)
-      if (!item) throw new Error(`Unknown portfolio item: ${id}`)
+      if (!item) throw new Error(`Unknown artwork item: ${id}`)
       return item
     })
   )
@@ -56,12 +56,13 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onSelectPiece }) =
   const rows = resolveRows(isCompact ? MOBILE_ROWS : DESKTOP_ROWS)
 
   return (
-    <section id="portfolio" className="section-container" aria-labelledby="portfolio-heading">
+    <section id="artwork" className="section-container" aria-labelledby="artwork-heading">
       <div className="section-heading-wrap">
-        <h2 id="portfolio-heading" className="section-heading">Selected Portfolio</h2>
+        <span className="section-eyebrow">Selected Artwork</span>
+        <h2 id="artwork-heading" className="sr-only">Selected Artwork</h2>
       </div>
 
-      <div className="portfolio-grid" role="region" aria-label="Selected portfolio">
+      <div className="portfolio-grid" role="region" aria-label="Selected artwork">
         {rows.map((row, rowIndex) => (
           <div className="portfolio-row" key={`portfolio-row-${rowIndex}`}>
             {row.map((item) => {
