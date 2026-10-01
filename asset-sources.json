@@ -6,37 +6,236 @@
     "handling": "Immutable source files: downloaded byte-for-byte for responsive display only; never modified, retouched, upscaled, recolored, or used with image-generation/editing tools."
   },
   "assets": [
-    {"id":"1aMHJ1HIMWiURXhsnitHANH5raHG8gH65","sourceName":"header-v1.jpg","localPath":"public/assets/header/header-v1.jpg","section":"hero","displayTitle":"Hero artwork"},
-    {"id":"1uRPZtAvWh0U7nGirHW9Ll9fMUNvOoOVF","sourceName":"skunk-squad.jpg","localPath":"public/assets/book-covers/skunk-squad.jpg","section":"books","displayTitle":"Skunk Squad"},
-    {"id":"1s4H1XQ9D-Q9cvLw0LRYq8ndWg_8VBtgc","sourceName":"undercover-iguana.jpg","localPath":"public/assets/book-covers/undercover-iguana.jpg","section":"books","displayTitle":"Undercover Iguana"},
-    {"id":"1JGAQ2lM5OnPv0JfGZ2lbg2WR7n1z_4fX","sourceName":"ODTE-COVER.jpg","localPath":"public/assets/book-covers/ODTE-COVER.jpg","section":"books","displayTitle":"One Day, The End"},
-    {"id":"1TTyYBJnROYzoX4HkvvzRYuX2GvuJ5mAn","sourceName":"whatif-cover.jpg","localPath":"public/assets/book-covers/whatif-cover.jpg","section":"books","displayTitle":"What If? Then We…"},
-    {"id":"1sO0x9EcVk2Uo1vpg_uWqRgY3Y_GhOfaW","sourceName":"garbage-island-cover.jpg","localPath":"public/assets/book-covers/garbage-island-cover.jpg","section":"books","displayTitle":"Garbage Island"},
-    {"id":"1gnrwf2xP4QLeCeyMkMzMKNlAVIEmDsgs","sourceName":"super-jumbo-cover.jpg","localPath":"public/assets/book-covers/super-jumbo-cover.jpg","section":"books","displayTitle":"Super Jumbo"},
-    {"id":"17LHgyqYkFtDjy-pYfcXWzuSHrH5n4of2","sourceName":"not-about-dragons-cover.jpg","localPath":"public/assets/book-covers/not-about-dragons-cover.jpg","section":"books","displayTitle":"This Book Is Not About Dragons"},
-    {"id":"1xTTga1WN_1QYL_M_RPAXPJGboaYVmyLI","sourceName":"flashight-night.jpg","localPath":"public/assets/book-covers/flashight-night.jpg","section":"books","displayTitle":"Flashlight Night"},
-    {"id":"1iaPNsBV3vZ-UApKn5utMjfytMyveO_oz","sourceName":"cover-6-21-16b.jpg","localPath":"public/assets/book-covers/cover-6-21-16b.jpg","section":"books","displayTitle":"How to Cheer Up Dad"},
-    {"id":"14AHLTfgxmwN6M6ePnPBLSLRkXuFie2R2","sourceName":"book-cover.jpg","localPath":"public/assets/book-covers/book-cover.jpg","section":"books","displayTitle":"Puppy, Puppy, Puppy"},
-    {"id":"14nXjB-PWgr4nI6bmNIGi7YpZtHGNT6fK","sourceName":"Untitled_Artwork-8.jpg","localPath":"public/assets/portfolio/Untitled_Artwork-8.jpg","section":"portfolio","displayTitle":"Selected illustration 01"},
-    {"id":"14YRGNj5XJhHnPIDzzQPtu9I3wc1_xrXD","sourceName":"Untitled_Artwork-47.jpg","localPath":"public/assets/portfolio/Untitled_Artwork-47.jpg","section":"portfolio","displayTitle":"Selected illustration 02"},
-    {"id":"13Z7nMpqfUCbEw69XaDtUmqRDWuKN_vfl","sourceName":"Unsinkable-1-v2.jpg","localPath":"public/assets/portfolio/Unsinkable-1-v2.jpg","section":"portfolio","displayTitle":"Unsinkable"},
-    {"id":"1N6vTN_uAE0NXbvcHHYVfizGSnKChz4X4","sourceName":"Untitled_Artwork-45.jpg","localPath":"public/assets/portfolio/Untitled_Artwork-45.jpg","section":"portfolio","displayTitle":"Selected illustration 03"},
-    {"id":"1gvAk3_L-7pVQFJt-uz1YCj-lMS4368m1","sourceName":"Untitled_Artwork-27.jpg","localPath":"public/assets/portfolio/Untitled_Artwork-27.jpg","section":"portfolio","displayTitle":"Selected illustration 04"},
-    {"id":"17XxdQZecCPzk8rTudOb-oYUOY_UL4bny","sourceName":"Untitled_Artwork-28.jpg","localPath":"public/assets/portfolio/Untitled_Artwork-28.jpg","section":"portfolio","displayTitle":"Selected illustration 05"},
-    {"id":"1meZ0eP-oBnP1HUpO3LXH-iuFO825gK9e","sourceName":"working-2.jpg","localPath":"public/assets/portfolio/working-2.jpg","section":"portfolio","displayTitle":"Working study"},
-    {"id":"1_mAecYeW4VJul3OnTZ2E66Lbj3OOJ0kE","sourceName":"Untitled_Artwork-13.jpg","localPath":"public/assets/portfolio/Untitled_Artwork-13.jpg","section":"portfolio","displayTitle":"Selected illustration 06"},
-    {"id":"1kLpe2c0PPW0NuezR8loU6j2GLgSs3gw5","sourceName":"Untitled_Artwork-9.jpg","localPath":"public/assets/portfolio/Untitled_Artwork-9.jpg","section":"portfolio","displayTitle":"Selected illustration 07"},
-    {"id":"11K5xScx-XY_XriWzXv_hVKifPNBbjY7g","sourceName":"SKM_C300i26051814030.jpg","localPath":"public/assets/portfolio/SKM_C300i26051814030.jpg","section":"portfolio","displayTitle":"Selected illustration 08"},
-    {"id":"1ONh-pblr5TzlB7yx6o8CoRa94se79wRS","sourceName":"SKM_C300i26051814060.jpg","localPath":"public/assets/portfolio/SKM_C300i26051814060.jpg","section":"portfolio","displayTitle":"Selected illustration 09"},
-    {"id":"1tRgc1VVf85QmcE9rNpDd8e51_8jvIWxm","sourceName":"9.jpg","localPath":"public/assets/portfolio/9.jpg","section":"portfolio","displayTitle":"Selected illustration 10"},
-    {"id":"1j_e09WS3m8IWHnj0t22lSN4LKf27IRP1","sourceName":"010.jpg","localPath":"public/assets/portfolio/010.jpg","section":"portfolio","displayTitle":"Selected illustration 11"},
-    {"id":"1P-GdXWbDcQ58E13UDDnRX5idAUoPXkyO","sourceName":"7.jpg","localPath":"public/assets/portfolio/7.jpg","section":"portfolio","displayTitle":"Selected illustration 12"},
-    {"id":"16ZDCiNfBKQ2wmqo_taElr0FU8Pv_ZtBm","sourceName":"8.jpg","localPath":"public/assets/portfolio/8.jpg","section":"portfolio","displayTitle":"Selected illustration 13"},
-    {"id":"1zK5EKoP6W6jwc7uT7uaeEh_WOpmLcZmY","sourceName":"2.jpg","localPath":"public/assets/portfolio/2.jpg","section":"portfolio","displayTitle":"Selected illustration 14"},
-    {"id":"1CKboOjLIjziTLQd9-F_3x3_2NsNvf7jg","sourceName":"1.jpg","localPath":"public/assets/portfolio/1.jpg","section":"portfolio","displayTitle":"Selected illustration 15"},
-    {"id":"1quRH5uOBGDxSyjOuQ-j2P1hzcUbmbEYp","sourceName":"4.jpg","localPath":"public/assets/portfolio/4.jpg","section":"portfolio","displayTitle":"Selected illustration 16"},
-    {"id":"1Hqr65ZCYr2_pNCeArQ6B3CmAJYDJwic5","sourceName":"5.jpg","localPath":"public/assets/portfolio/5.jpg","section":"portfolio","displayTitle":"Selected illustration 17"},
-    {"id":"1hiOxxnD03LyoBwG0twedOZVlYhEkL2GB","sourceName":"6.jpg","localPath":"public/assets/portfolio/6.jpg","section":"portfolio","displayTitle":"Selected illustration 18"},
-    {"id":"15z3j3P9VOXVuRjTaM5q0nX8Y7U46_fVP","sourceName":"3.jpg","localPath":"public/assets/portfolio/3.jpg","section":"portfolio","displayTitle":"Selected illustration 19"}
+    {
+      "id": "1aMHJ1HIMWiURXhsnitHANH5raHG8gH65",
+      "sourceName": "header-v1.jpg",
+      "localPath": "public/assets/header/header-v1.jpg",
+      "section": "hero",
+      "displayTitle": "Hero artwork"
+    },
+    {
+      "id": "1uRPZtAvWh0U7nGirHW9Ll9fMUNvOoOVF",
+      "sourceName": "skunk-squad.jpg",
+      "localPath": "public/assets/book-covers/skunk-squad.jpg",
+      "section": "books",
+      "displayTitle": "Skunk Squad"
+    },
+    {
+      "id": "1s4H1XQ9D-Q9cvLw0LRYq8ndWg_8VBtgc",
+      "sourceName": "undercover-iguana.jpg",
+      "localPath": "public/assets/book-covers/undercover-iguana.jpg",
+      "section": "books",
+      "displayTitle": "Undercover Iguana"
+    },
+    {
+      "id": "1JGAQ2lM5OnPv0JfGZ2lbg2WR7n1z_4fX",
+      "sourceName": "ODTE-COVER.jpg",
+      "localPath": "public/assets/book-covers/ODTE-COVER.jpg",
+      "section": "books",
+      "displayTitle": "One Day, The End"
+    },
+    {
+      "id": "1TTyYBJnROYzoX4HkvvzRYuX2GvuJ5mAn",
+      "sourceName": "whatif-cover.jpg",
+      "localPath": "public/assets/book-covers/whatif-cover.jpg",
+      "section": "books",
+      "displayTitle": "What If? Then We\u2026"
+    },
+    {
+      "id": "1sO0x9EcVk2Uo1vpg_uWqRgY3Y_GhOfaW",
+      "sourceName": "garbage-island-cover.jpg",
+      "localPath": "public/assets/book-covers/garbage-island-cover.jpg",
+      "section": "books",
+      "displayTitle": "Garbage Island"
+    },
+    {
+      "id": "1gnrwf2xP4QLeCeyMkMzMKNlAVIEmDsgs",
+      "sourceName": "super-jumbo-cover.jpg",
+      "localPath": "public/assets/book-covers/super-jumbo-cover.jpg",
+      "section": "books",
+      "displayTitle": "Super Jumbo"
+    },
+    {
+      "id": "17LHgyqYkFtDjy-pYfcXWzuSHrH5n4of2",
+      "sourceName": "not-about-dragons-cover.jpg",
+      "localPath": "public/assets/book-covers/not-about-dragons-cover.jpg",
+      "section": "books",
+      "displayTitle": "This Book Is Not About Dragons"
+    },
+    {
+      "id": "1xTTga1WN_1QYL_M_RPAXPJGboaYVmyLI",
+      "sourceName": "flashight-night.jpg",
+      "localPath": "public/assets/book-covers/flashight-night.jpg",
+      "section": "books",
+      "displayTitle": "Flashlight Night"
+    },
+    {
+      "id": "1iaPNsBV3vZ-UApKn5utMjfytMyveO_oz",
+      "sourceName": "cover-6-21-16b.jpg",
+      "localPath": "public/assets/book-covers/cover-6-21-16b.jpg",
+      "section": "books",
+      "displayTitle": "How to Cheer Up Dad"
+    },
+    {
+      "id": "14AHLTfgxmwN6M6ePnPBLSLRkXuFie2R2",
+      "sourceName": "book-cover.jpg",
+      "localPath": "public/assets/book-covers/book-cover.jpg",
+      "section": "books",
+      "displayTitle": "Puppy, Puppy, Puppy"
+    },
+    {
+      "id": "14nXjB-PWgr4nI6bmNIGi7YpZtHGNT6fK",
+      "sourceName": "Untitled_Artwork-8.jpg",
+      "localPath": "public/assets/portfolio/Untitled_Artwork-8.jpg",
+      "section": "portfolio",
+      "displayTitle": "Selected illustration 01"
+    },
+    {
+      "id": "14YRGNj5XJhHnPIDzzQPtu9I3wc1_xrXD",
+      "sourceName": "Untitled_Artwork-47.jpg",
+      "localPath": "public/assets/portfolio/Untitled_Artwork-47.jpg",
+      "section": "portfolio",
+      "displayTitle": "Selected illustration 02"
+    },
+    {
+      "id": "13Z7nMpqfUCbEw69XaDtUmqRDWuKN_vfl",
+      "sourceName": "Unsinkable-1-v2.jpg",
+      "localPath": "public/assets/portfolio/Unsinkable-1-v2.jpg",
+      "section": "portfolio",
+      "displayTitle": "Unsinkable"
+    },
+    {
+      "id": "1N6vTN_uAE0NXbvcHHYVfizGSnKChz4X4",
+      "sourceName": "Untitled_Artwork-45.jpg",
+      "localPath": "public/assets/portfolio/Untitled_Artwork-45.jpg",
+      "section": "portfolio",
+      "displayTitle": "Selected illustration 03"
+    },
+    {
+      "id": "1gvAk3_L-7pVQFJt-uz1YCj-lMS4368m1",
+      "sourceName": "Untitled_Artwork-27.jpg",
+      "localPath": "public/assets/portfolio/Untitled_Artwork-27.jpg",
+      "section": "portfolio",
+      "displayTitle": "Selected illustration 04"
+    },
+    {
+      "id": "17XxdQZecCPzk8rTudOb-oYUOY_UL4bny",
+      "sourceName": "Untitled_Artwork-28.jpg",
+      "localPath": "public/assets/portfolio/Untitled_Artwork-28.jpg",
+      "section": "portfolio",
+      "displayTitle": "Selected illustration 05"
+    },
+    {
+      "id": "1meZ0eP-oBnP1HUpO3LXH-iuFO825gK9e",
+      "sourceName": "working-2.jpg",
+      "localPath": "public/assets/portfolio/working-2.jpg",
+      "section": "portfolio",
+      "displayTitle": "Working study"
+    },
+    {
+      "id": "1_mAecYeW4VJul3OnTZ2E66Lbj3OOJ0kE",
+      "sourceName": "Untitled_Artwork-13.jpg",
+      "localPath": "public/assets/portfolio/Untitled_Artwork-13.jpg",
+      "section": "portfolio",
+      "displayTitle": "Selected illustration 06"
+    },
+    {
+      "id": "1kLpe2c0PPW0NuezR8loU6j2GLgSs3gw5",
+      "sourceName": "Untitled_Artwork-9.jpg",
+      "localPath": "public/assets/portfolio/Untitled_Artwork-9.jpg",
+      "section": "portfolio",
+      "displayTitle": "Selected illustration 07"
+    },
+    {
+      "id": "11K5xScx-XY_XriWzXv_hVKifPNBbjY7g",
+      "sourceName": "SKM_C300i26051814030.jpg",
+      "localPath": "public/assets/portfolio/SKM_C300i26051814030.jpg",
+      "section": "portfolio",
+      "displayTitle": "Selected illustration 08"
+    },
+    {
+      "id": "1ONh-pblr5TzlB7yx6o8CoRa94se79wRS",
+      "sourceName": "SKM_C300i26051814060.jpg",
+      "localPath": "public/assets/portfolio/SKM_C300i26051814060.jpg",
+      "section": "portfolio",
+      "displayTitle": "Selected illustration 09"
+    },
+    {
+      "id": "1tRgc1VVf85QmcE9rNpDd8e51_8jvIWxm",
+      "sourceName": "9.jpg",
+      "localPath": "public/assets/portfolio/9.jpg",
+      "section": "portfolio",
+      "displayTitle": "Selected illustration 10"
+    },
+    {
+      "id": "1j_e09WS3m8IWHnj0t22lSN4LKf27IRP1",
+      "sourceName": "010.jpg",
+      "localPath": "public/assets/portfolio/010.jpg",
+      "section": "portfolio",
+      "displayTitle": "Selected illustration 11"
+    },
+    {
+      "id": "1P-GdXWbDcQ58E13UDDnRX5idAUoPXkyO",
+      "sourceName": "7.jpg",
+      "localPath": "public/assets/portfolio/7.jpg",
+      "section": "portfolio",
+      "displayTitle": "Selected illustration 12"
+    },
+    {
+      "id": "16ZDCiNfBKQ2wmqo_taElr0FU8Pv_ZtBm",
+      "sourceName": "8.jpg",
+      "localPath": "public/assets/portfolio/8.jpg",
+      "section": "portfolio",
+      "displayTitle": "Selected illustration 13"
+    },
+    {
+      "id": "1zK5EKoP6W6jwc7uT7uaeEh_WOpmLcZmY",
+      "sourceName": "2.jpg",
+      "localPath": "public/assets/portfolio/2.jpg",
+      "section": "portfolio",
+      "displayTitle": "Selected illustration 14"
+    },
+    {
+      "id": "1CKboOjLIjziTLQd9-F_3x3_2NsNvf7jg",
+      "sourceName": "1.jpg",
+      "localPath": "public/assets/portfolio/1.jpg",
+      "section": "portfolio",
+      "displayTitle": "Selected illustration 15"
+    },
+    {
+      "id": "1quRH5uOBGDxSyjOuQ-j2P1hzcUbmbEYp",
+      "sourceName": "4.jpg",
+      "localPath": "public/assets/portfolio/4.jpg",
+      "section": "portfolio",
+      "displayTitle": "Selected illustration 16"
+    },
+    {
+      "id": "1Hqr65ZCYr2_pNCeArQ6B3CmAJYDJwic5",
+      "sourceName": "5.jpg",
+      "localPath": "public/assets/portfolio/5.jpg",
+      "section": "portfolio",
+      "displayTitle": "Selected illustration 17"
+    },
+    {
+      "id": "1hiOxxnD03LyoBwG0twedOZVlYhEkL2GB",
+      "sourceName": "6.jpg",
+      "localPath": "public/assets/portfolio/6.jpg",
+      "section": "portfolio",
+      "displayTitle": "Selected illustration 18"
+    },
+    {
+      "id": "15z3j3P9VOXVuRjTaM5q0nX8Y7U46_fVP",
+      "sourceName": "3.jpg",
+      "localPath": "public/assets/portfolio/3.jpg",
+      "section": "portfolio",
+      "displayTitle": "Selected illustration 19"
+    },
+    {
+      "id": "1zaQxMxqMEsteSxX0qd8eMXh7PsaaOTqy",
+      "sourceName": "header-v2.jpg",
+      "localPath": "public/assets/header/header-v2.jpg",
+      "section": "hero",
+      "displayTitle": "Hero artwork v2"
+    }
   ]
 }

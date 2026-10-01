@@ -51,10 +51,10 @@ export interface WipItem {
 }
 
 export const HERO_ASSET = {
-  src: '/assets/header/header-v1.jpg',
-  sourceName: 'header-v1.jpg',
+  src: '/assets/header/header-v2.jpg',
+  sourceName: 'header-v2.jpg',
   width: 1400,
-  height: 372,
+  height: 451,
   integrity: 'Original Drive download; unaltered byte-for-byte asset.',
 }
 

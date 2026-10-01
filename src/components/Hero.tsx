@@ -7,7 +7,7 @@ export const Hero: React.FC = () => {
       <div className="hero-art-frame">
         <img
           src={HERO_ASSET.src}
-          alt="Original panoramic signature illustration by Fred Koehler: adventure boat and lighthouse ocean spread"
+          alt="Original supplied Fred Koehler hero artwork"
           className="hero-img"
           width={HERO_ASSET.width}
           height={HERO_ASSET.height}

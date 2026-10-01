@@ -5,7 +5,7 @@
     "folderUrl": "https://drive.google.com/drive/folders/10J184IuOfNq08eZz6_l0IW5xoLB58uIh?usp=drive_link",
     "handling": "Immutable source files: downloaded byte-for-byte for responsive display only; never modified, retouched, upscaled, recolored, or used with image-generation/editing tools."
   },
-  "assetCount": 32,
+  "assetCount": 33,
   "assets": [
     {
       "id": "1aMHJ1HIMWiURXhsnitHANH5raHG8gH65",
@@ -483,6 +483,21 @@
       "dimensions": {
         "width": 2500,
         "height": 1250,
+        "format": "JPEG"
+      },
+      "integrity": "Original Drive download; no image transformation applied."
+    },
+    {
+      "id": "1zaQxMxqMEsteSxX0qd8eMXh7PsaaOTqy",
+      "sourceName": "header-v2.jpg",
+      "localPath": "public/assets/header/header-v2.jpg",
+      "section": "hero",
+      "displayTitle": "Hero artwork v2",
+      "byteSize": 91722,
+      "sha256": "3583ca6e46b5e559d066f242dfcb83b6387ac2f087bb3d63d73bb1ece0342c4f",
+      "dimensions": {
+        "width": 1400,
+        "height": 451,
         "format": "JPEG"
       },
       "integrity": "Original Drive download; no image transformation applied."
