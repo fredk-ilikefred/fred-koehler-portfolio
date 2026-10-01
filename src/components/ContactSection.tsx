@@ -30,8 +30,7 @@ export const ContactSection: React.FC = () => {
           </div>
           <h3 className="reason-title">School Visits</h3>
           <p className="reason-desc">
-            Inspiring in-person assemblies, virtual school visits, and interactive drawing workshops
-            teaching kids how to invent characters and tell resilient stories.
+            Reach out for in-person assemblies and interactive drawing workshops.
           </p>
         </article>
 
@@ -43,8 +42,8 @@ export const ContactSection: React.FC = () => {
           </div>
           <h3 className="reason-title">Editor &amp; Art Director Inquiries</h3>
           <p className="reason-desc">
-            Direct communication regarding new manuscripts, book illustration assignments, dummy
-            acquisitions, and literary agency representation discussions.
+            My inbox is open to editors and art directors for discussions about works in progress or new
+            projects.
           </p>
         </article>
 
@@ -57,8 +56,8 @@ export const ContactSection: React.FC = () => {
           </div>
           <h3 className="reason-title">Fan Mail</h3>
           <p className="reason-desc">
-            Questions from young artists, classroom letters, and notes from families who love Little
-            Jumbo, Archibald Shrew, and Cheerio the dog.
+            Questions from young artists, classroom letters, and notes from families. I may be slow, but I
+            always respond.
           </p>
         </article>
       </div>

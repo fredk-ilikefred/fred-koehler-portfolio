@@ -425,50 +425,61 @@ img {
 /* CONTACT */
 .contact-reasons-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(1rem, 2.5vw, 2rem);
-  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
 }
 
 .reason-card {
-  background-color: #FFFFFF;
-  border: 1px solid var(--color-rule);
-  border-radius: 2px;
-  padding: 1.6rem 1.4rem;
+  background-color: transparent;
+  border: 0;
+  border-right: 1px solid var(--color-rule);
+  border-radius: 0;
+  padding: 0.25rem clamp(0.6rem, 1.7vw, 1.35rem);
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  transition: border-color 0.18s ease;
+  gap: 0.45rem;
 }
 
-.reason-card:hover {
-  border-color: var(--color-seafoam);
+.reason-card:first-child {
+  padding-left: 0;
+}
+
+.reason-card:last-child {
+  border-right: 0;
+  padding-right: 0;
 }
 
 .reason-icon-wrap {
-  width: 44px;
-  height: 44px;
-  border-radius: 2px;
-  background-color: var(--color-paper);
-  border: 1px solid var(--color-rule);
+  width: 28px;
+  height: 28px;
+  border-radius: 0;
+  background-color: transparent;
+  border: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   color: var(--color-seafoam);
+}
+
+.reason-icon-wrap svg {
+  width: 17px;
+  height: 17px;
 }
 
 .reason-title {
   font-family: var(--font-display);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.11em;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
   text-transform: uppercase;
   color: var(--color-ink);
 }
 
 .reason-desc {
-  font-size: 0.88rem;
-  line-height: 1.55;
+  font-size: 0.8rem;
+  line-height: 1.45;
   color: var(--color-ink-muted);
 }
 
@@ -765,9 +776,6 @@ img {
 /* RESPONSIVE BREAKPOINTS */
 @media (max-width: 1024px) {
   .contact-layout {
-    grid-template-columns: 1fr;
-  }
-  .contact-reasons-grid {
     grid-template-columns: 1fr;
   }
 }
