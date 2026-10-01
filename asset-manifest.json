@@ -5,7 +5,7 @@
     "folderUrl": "https://drive.google.com/drive/folders/10J184IuOfNq08eZz6_l0IW5xoLB58uIh?usp=drive_link",
     "handling": "Immutable source files: downloaded byte-for-byte for responsive display only; never modified, retouched, upscaled, recolored, or used with image-generation/editing tools."
   },
-  "assetCount": 36,
+  "assetCount": 37,
   "assets": [
     {
       "id": "1aMHJ1HIMWiURXhsnitHANH5raHG8gH65",
@@ -546,6 +546,21 @@
         "format": "JPEG"
       },
       "integrity": "Original Drive download; no image transformation applied."
+    },
+    {
+      "id": "header-fish-icon-gif",
+      "sourceName": "icon.gif",
+      "localPath": "public/assets/header/icon.gif",
+      "section": "branding",
+      "displayTitle": "Cyan Fish Mark (icon.gif)",
+      "byteSize": 3659,
+      "sha256": "eb9bd7960a851b8e516690f7d33d6782558f951f1f459287def2a7193d6cc0a6",
+      "dimensions": {
+        "width": 250,
+        "height": 242,
+        "format": "GIF"
+      },
+      "integrity": "Original user-supplied asset; no modification or AI processing applied."
     }
   ]
 }

@@ -224,3 +224,6 @@ export const WIP_PROJECTS: WipProject[] = [
     reverseLayout: true,
   },
 ]
+
+// Backward-compatible alias for any in-flight HMR client requests
+export const WIP_ITEMS = WIP_PROJECTS

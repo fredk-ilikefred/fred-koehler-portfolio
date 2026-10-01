@@ -6,12 +6,12 @@ export const Header: React.FC = () => {
       <div className="header-container">
         <a href="#hero" className="brand-link" aria-label="Fred Koehler Home">
           <img
-            src="/assets/header/blue-fish-icon.png"
+            src="/assets/header/icon.gif"
             alt=""
             aria-hidden="true"
             className="brand-symbol-fish"
-            width={39}
-            height={35}
+            width={32}
+            height={31}
           />
           <span className="brand-wordmark">Fred Koehler</span>
         </a>
