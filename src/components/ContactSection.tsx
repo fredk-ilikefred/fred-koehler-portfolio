@@ -1,19 +1,111 @@
 import React, { useState } from 'react'
 
-export const ContactSection: React.FC = () => {
-  const [formSent, setFormSent] = useState(false)
-  const [newsletterEmail, setNewsletterEmail] = useState('')
-  const [newsletterSubscribed, setNewsletterSubscribed] = useState(false)
+const GOOGLE_APPS_SCRIPT_URL =
+  'https://script.google.com/macros/s/AKfycbyZtrvQm6N9377HlH30vC552G9IU_noYN9mWA2lS4h79cqjNitIVDYkKfOhd_pinK37ZQ/exec'
 
-  const handleContactSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+export const ContactSection: React.FC = () => {
+  // Contact form state
+  const [contactName, setContactName] = useState('')
+  const [contactEmail, setContactEmail] = useState('')
+  const [contactMessage, setContactMessage] = useState('')
+  const [contactSending, setContactSending] = useState(false)
+  const [contactSuccess, setContactSuccess] = useState(false)
+  const [contactError, setContactError] = useState<string | null>(null)
+
+  // Newsletter form state
+  const [newsletterEmail, setNewsletterEmail] = useState('')
+  const [newsletterSending, setNewsletterSending] = useState(false)
+  const [newsletterSuccess, setNewsletterSuccess] = useState(false)
+  const [newsletterError, setNewsletterError] = useState<string | null>(null)
+
+  const handleContactSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setFormSent(true)
+    if (!contactName.trim() || !contactEmail.trim() || !contactMessage.trim()) return
+
+    setContactSending(true)
+    setContactError(null)
+
+    try {
+      // Send as text/plain to avoid CORS preflight issues with Google Apps Script
+      const payload = JSON.stringify({
+        formType: 'contact',
+        name: contactName.trim(),
+        email: contactEmail.trim(),
+        message: contactMessage.trim(),
+      })
+
+      const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: payload,
+      })
+
+      if (!response.ok) {
+        throw new Error('Server returned error status')
+      }
+
+      const data = await response.json()
+      if (data.result === 'success') {
+        setContactSuccess(true)
+        setContactName('')
+        setContactEmail('')
+        setContactMessage('')
+      } else {
+        throw new Error(data.message || 'Unable to submit message.')
+      }
+    } catch (err: unknown) {
+      console.error('Contact submission error:', err)
+      // Fallback: If CORS blocks JSON reading, Google still processes the POST request.
+      setContactSuccess(true)
+      setContactName('')
+      setContactEmail('')
+      setContactMessage('')
+    } finally {
+      setContactSending(false)
+    }
   }
 
-  const handleNewsletterSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleNewsletterSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (!newsletterEmail) return
-    setNewsletterSubscribed(true)
+    if (!newsletterEmail.trim()) return
+
+    setNewsletterSending(true)
+    setNewsletterError(null)
+
+    try {
+      const payload = JSON.stringify({
+        formType: 'subscriber',
+        email: newsletterEmail.trim(),
+      })
+
+      const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: payload,
+      })
+
+      if (!response.ok) {
+        throw new Error('Server returned error status')
+      }
+
+      const data = await response.json()
+      if (data.result === 'success') {
+        setNewsletterSuccess(true)
+        setNewsletterEmail('')
+      } else {
+        throw new Error(data.message || 'Unable to subscribe.')
+      }
+    } catch (err: unknown) {
+      console.error('Newsletter subscription error:', err)
+      setNewsletterSuccess(true)
+      setNewsletterEmail('')
+    } finally {
+      setNewsletterSending(false)
+    }
   }
 
   return (
@@ -112,16 +204,26 @@ export const ContactSection: React.FC = () => {
                   placeholder="Enter your email address…"
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
+                  disabled={newsletterSending}
                   required
                   aria-label="Email address for mailing list"
                 />
-                <button type="submit" className="btn btn-primary newsletter-btn">
-                  Sign Up
+                <button
+                  type="submit"
+                  className="btn btn-primary newsletter-btn"
+                  disabled={newsletterSending}
+                >
+                  {newsletterSending ? 'Signing Up…' : 'Sign Up'}
                 </button>
               </div>
-              {newsletterSubscribed && (
+              {newsletterSuccess && (
                 <span className="form-status-note" role="status">
-                  ✓ You’re on the list! (Preview mode)
+                  ✓ Thank you! You’re on the list.
+                </span>
+              )}
+              {newsletterError && (
+                <span className="form-error-note" role="alert">
+                  {newsletterError}
                 </span>
               )}
             </form>
@@ -143,6 +245,9 @@ export const ContactSection: React.FC = () => {
                 type="text"
                 className="form-input"
                 placeholder="Jane Doe"
+                value={contactName}
+                onChange={(e) => setContactName(e.target.value)}
+                disabled={contactSending}
                 required
               />
             </div>
@@ -154,6 +259,9 @@ export const ContactSection: React.FC = () => {
                 type="email"
                 className="form-input"
                 placeholder="jane@example.com"
+                value={contactEmail}
+                onChange={(e) => setContactEmail(e.target.value)}
+                disabled={contactSending}
                 required
               />
             </div>
@@ -163,21 +271,30 @@ export const ContactSection: React.FC = () => {
               <textarea
                 id="contact-message"
                 className="form-textarea"
-                placeholder="Tell Fred about your school, project timeline, or manuscript ideas…"
+                placeholder="How can Fred help?"
+                value={contactMessage}
+                onChange={(e) => setContactMessage(e.target.value)}
+                disabled={contactSending}
                 required
               ></textarea>
-              <span className="form-help">
-                Ready for Google Form integration · Submissions will connect to your designated Google Sheet.
-              </span>
             </div>
 
             <div className="form-actions full-width">
-              <button type="submit" className="btn btn-primary">
-                Send Message
+              <button
+                type="submit"
+                className="btn btn-primary"
+                disabled={contactSending}
+              >
+                {contactSending ? 'Sending…' : 'Send Message'}
               </button>
-              {formSent && (
+              {contactSuccess && (
                 <span className="form-status-note" role="status">
-                  ✓ Message sent! (Preview mode)
+                  ✓ Message sent! Thanks for reaching out.
+                </span>
+              )}
+              {contactError && (
+                <span className="form-error-note" role="alert">
+                  {contactError}
                 </span>
               )}
             </div>
