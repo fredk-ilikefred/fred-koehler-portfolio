@@ -19,6 +19,7 @@ export const WipSection: React.FC = () => {
               <img
                 src={project.artSrc}
                 alt={project.artAlt}
+                title={project.artAlt}
                 className="wip-project-art-img"
                 width={project.artWidth}
                 height={project.artHeight}

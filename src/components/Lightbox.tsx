@@ -74,7 +74,8 @@ export const Lightbox: React.FC<LightboxProps> = ({
         <div className="lightbox-img-frame">
           <img
             src={piece.src}
-            alt={piece.title}
+            alt={piece.altText}
+            title={piece.altText}
             className="lightbox-img"
             width={piece.width}
             height={piece.height}

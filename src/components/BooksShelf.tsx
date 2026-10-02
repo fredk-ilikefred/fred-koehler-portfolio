@@ -47,7 +47,8 @@ export const BooksShelf: React.FC = () => {
             <article key={book.id} className="book-card" aria-label={book.title}>
               <img
                 src={book.src}
-                alt={`Cover of ${book.title}`}
+                alt={book.altText}
+                title={book.altText}
                 className="book-cover-img"
                 width={book.width}
                 height={book.height}

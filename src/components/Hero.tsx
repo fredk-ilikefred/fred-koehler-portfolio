@@ -7,7 +7,8 @@ export const Hero: React.FC = () => {
       <div className="hero-art-frame">
         <img
           src={HERO_ASSET.src}
-          alt="Original supplied Fred Koehler hero artwork"
+          alt={HERO_ASSET.altText}
+          title={HERO_ASSET.altText}
           className="hero-img"
           width={HERO_ASSET.width}
           height={HERO_ASSET.height}

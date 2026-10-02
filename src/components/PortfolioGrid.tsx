@@ -83,7 +83,8 @@ export const PortfolioGrid: React.FC<PortfolioGridProps> = ({ onSelectPiece }) =
                 >
                   <img
                     src={item.src}
-                    alt={item.title}
+                    alt={item.altText}
+                    title={item.altText}
                     className="portfolio-thumb"
                     width={item.width}
                     height={item.height}

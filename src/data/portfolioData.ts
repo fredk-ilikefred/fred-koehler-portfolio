@@ -1,6 +1,7 @@
 export interface BookItem {
   id: string
   title: string
+  altText: string
   filename: string
   src: string
   width: number
@@ -15,6 +16,7 @@ export interface BookItem {
 export interface PortfolioItem {
   id: string
   title: string
+  altText: string
   filename: string
   src: string
   width: number
@@ -37,6 +39,8 @@ export interface WipProject {
 
 export const HERO_ASSET = {
   src: '/assets/header/header-v3b.jpg',
+  altText:
+    'Fred Koehler author and illustrator banner with hand-drawn ocean waves, a floating bottle, and storybook characters',
   sourceName: 'header-v3b.jpg',
   width: 1300,
   height: 354,
@@ -47,6 +51,7 @@ export const PUBLISHED_BOOKS: BookItem[] = [
   {
     id: 'garbage-island',
     title: 'Garbage Island',
+    altText: 'Cover of Garbage Island, a middle grade adventure written and illustrated by Fred Koehler',
     filename: 'garbage-island-cover.jpg',
     src: '/assets/book-covers/garbage-island-cover.jpg',
     width: 1791,
@@ -60,6 +65,7 @@ export const PUBLISHED_BOOKS: BookItem[] = [
   {
     id: 'one-day-the-end',
     title: 'One Day, The End',
+    altText: 'Cover of One Day, The End, a picture book illustrated by Fred Koehler',
     filename: 'ODTE-COVER.jpg',
     src: '/assets/book-covers/ODTE-COVER.jpg',
     width: 2392,
@@ -73,6 +79,7 @@ export const PUBLISHED_BOOKS: BookItem[] = [
   {
     id: 'how-to-cheer-up-dad',
     title: 'How to Cheer Up Dad',
+    altText: 'Cover of How to Cheer Up Dad, a picture book written and illustrated by Fred Koehler',
     filename: 'cover-6-21-16b.jpg',
     src: '/assets/book-covers/cover-6-21-16b.jpg',
     width: 600,
@@ -86,6 +93,7 @@ export const PUBLISHED_BOOKS: BookItem[] = [
   {
     id: 'super-jumbo',
     title: 'Super Jumbo',
+    altText: 'Cover of Super Jumbo, a picture book written and illustrated by Fred Koehler',
     filename: 'super-jumbo-cover.jpg',
     src: '/assets/book-covers/super-jumbo-cover.jpg',
     width: 2000,
@@ -99,6 +107,7 @@ export const PUBLISHED_BOOKS: BookItem[] = [
   {
     id: 'flashlight-night',
     title: 'Flashlight Night',
+    altText: 'Cover of Flashlight Night, a picture book illustrated by Fred Koehler',
     filename: 'flashight-night.jpg',
     src: '/assets/book-covers/flashight-night.jpg',
     width: 1600,
@@ -112,6 +121,7 @@ export const PUBLISHED_BOOKS: BookItem[] = [
   {
     id: 'this-book-is-not-about-dragons',
     title: 'This Book Is NOT About Dragons',
+    altText: 'Cover of This Book Is NOT About Dragons, a picture book illustrated by Fred Koehler',
     filename: 'not-about-dragons-cover.jpg',
     src: '/assets/book-covers/not-about-dragons-cover.jpg',
     width: 730,
@@ -125,6 +135,7 @@ export const PUBLISHED_BOOKS: BookItem[] = [
   {
     id: 'what-if-then-we',
     title: 'What If? Then We…',
+    altText: 'Cover of What If? Then We…, a picture book illustrated by Fred Koehler',
     filename: 'whatif-cover.jpg',
     src: '/assets/book-covers/whatif-cover.jpg',
     width: 1500,
@@ -138,6 +149,7 @@ export const PUBLISHED_BOOKS: BookItem[] = [
   {
     id: 'puppy-and-piggy',
     title: 'Puppy and Piggy',
+    altText: 'Cover of Puppy and Piggy, an early reader picture book illustrated by Fred Koehler',
     filename: 'book-cover.jpg',
     src: '/assets/book-covers/book-cover.jpg',
     width: 2700,
@@ -150,6 +162,7 @@ export const PUBLISHED_BOOKS: BookItem[] = [
   {
     id: 'skunk-squad',
     title: 'Skunk Squad',
+    altText: 'Cover of Skunk Squad, an early graphic novel written and illustrated by Fred Koehler',
     filename: 'skunk-squad.jpg',
     src: '/assets/book-covers/skunk-squad.jpg',
     width: 1014,
@@ -162,6 +175,7 @@ export const PUBLISHED_BOOKS: BookItem[] = [
   {
     id: 'undercover-iguana',
     title: 'Undercover Iguana',
+    altText: 'Cover of Undercover Iguana, a middle grade book written and illustrated by Fred Koehler',
     filename: 'undercover-iguana.jpg',
     src: '/assets/book-covers/undercover-iguana.jpg',
     width: 1014,
@@ -173,27 +187,27 @@ export const PUBLISHED_BOOKS: BookItem[] = [
 ]
 
 export const PORTFOLIO_ITEMS: PortfolioItem[] = [
-  { id: 'portfolio-01', title: 'Selected Artwork 01', filename: 'Untitled_Artwork-8.jpg', src: '/assets/portfolio/Untitled_Artwork-8.jpg', width: 1000, height: 1000, aspectRatio: 1 },
-  { id: 'portfolio-02', title: 'Selected Artwork 02', filename: 'Untitled_Artwork-47.jpg', src: '/assets/portfolio/Untitled_Artwork-47.jpg', width: 750, height: 1000, aspectRatio: 0.75 },
-  { id: 'portfolio-03', title: 'Unsinkable Study', filename: 'Unsinkable-1-v2.jpg', src: '/assets/portfolio/Unsinkable-1-v2.jpg', width: 1000, height: 1432, aspectRatio: 1000 / 1432 },
-  { id: 'portfolio-04', title: 'Selected Artwork 04', filename: 'Untitled_Artwork-45.jpg', src: '/assets/portfolio/Untitled_Artwork-45.jpg', width: 1000, height: 750, aspectRatio: 1000 / 750 },
-  { id: 'portfolio-05', title: 'Selected Artwork 05', filename: 'Untitled_Artwork-27.jpg', src: '/assets/portfolio/Untitled_Artwork-27.jpg', width: 1500, height: 969, aspectRatio: 1500 / 969 },
-  { id: 'portfolio-06', title: 'Selected Artwork 06', filename: 'Untitled_Artwork-28.jpg', src: '/assets/portfolio/Untitled_Artwork-28.jpg', width: 1500, height: 664, aspectRatio: 1500 / 664 },
-  { id: 'portfolio-07', title: 'Working Process Study', filename: 'working-2.jpg', src: '/assets/portfolio/working-2.jpg', width: 1500, height: 750, aspectRatio: 2 },
-  { id: 'portfolio-08', title: 'Selected Artwork 08', filename: 'Untitled_Artwork-13.jpg', src: '/assets/portfolio/Untitled_Artwork-13.jpg', width: 1500, height: 667, aspectRatio: 1500 / 667 },
-  { id: 'portfolio-09', title: 'Selected Artwork 09', filename: 'Untitled_Artwork-9.jpg', src: '/assets/portfolio/Untitled_Artwork-9.jpg', width: 1000, height: 985, aspectRatio: 1000 / 985 },
-  { id: 'portfolio-10', title: 'Studio Drawing Sheet A', filename: 'SKM_C300i26051814030.jpg', src: '/assets/portfolio/SKM_C300i26051814030.jpg', width: 2932, height: 3090, aspectRatio: 2932 / 3090 },
-  { id: 'portfolio-11', title: 'Studio Drawing Sheet B', filename: 'SKM_C300i26051814060.jpg', src: '/assets/portfolio/SKM_C300i26051814060.jpg', width: 1998, height: 3268, aspectRatio: 1998 / 3268 },
-  { id: 'portfolio-12', title: 'Selected Artwork 12', filename: '9.jpg', src: '/assets/portfolio/9.jpg', width: 6475, height: 3325, aspectRatio: 6475 / 3325 },
-  { id: 'portfolio-13', title: 'Selected Artwork 13', filename: '010.jpg', src: '/assets/portfolio/010.jpg', width: 5700, height: 2850, aspectRatio: 2 },
-  { id: 'portfolio-14', title: 'Selected Artwork 14', filename: '7.jpg', src: '/assets/portfolio/7.jpg', width: 5550, height: 2850, aspectRatio: 5550 / 2850 },
-  { id: 'portfolio-15', title: 'Selected Artwork 15', filename: '8.jpg', src: '/assets/portfolio/8.jpg', width: 6150, height: 2850, aspectRatio: 6150 / 2850 },
-  { id: 'portfolio-16', title: 'Selected Artwork 16', filename: '2.jpg', src: '/assets/portfolio/2.jpg', width: 1000, height: 422, aspectRatio: 1000 / 422 },
-  { id: 'portfolio-17', title: 'Selected Artwork 17', filename: '1.jpg', src: '/assets/portfolio/1.jpg', width: 1000, height: 422, aspectRatio: 1000 / 422 },
-  { id: 'portfolio-18', title: 'Selected Artwork 18', filename: '4.jpg', src: '/assets/portfolio/4.jpg', width: 2500, height: 1250, aspectRatio: 2 },
-  { id: 'portfolio-19', title: 'Selected Artwork 19', filename: '5.jpg', src: '/assets/portfolio/5.jpg', width: 2500, height: 1250, aspectRatio: 2 },
-  { id: 'portfolio-20', title: 'Selected Artwork 20', filename: '6.jpg', src: '/assets/portfolio/6.jpg', width: 2500, height: 1250, aspectRatio: 2 },
-  { id: 'portfolio-21', title: 'Selected Artwork 21', filename: '3.jpg', src: '/assets/portfolio/3.jpg', width: 2500, height: 1250, aspectRatio: 2 },
+  { id: 'portfolio-01', title: 'Selected Artwork 01', altText: 'Selected children’s book illustration by Fred Koehler, portfolio artwork 01', filename: 'Untitled_Artwork-8.jpg', src: '/assets/portfolio/Untitled_Artwork-8.jpg', width: 1000, height: 1000, aspectRatio: 1 },
+  { id: 'portfolio-02', title: 'Selected Artwork 02', altText: 'Selected children’s book illustration by Fred Koehler, portfolio artwork 02', filename: 'Untitled_Artwork-47.jpg', src: '/assets/portfolio/Untitled_Artwork-47.jpg', width: 750, height: 1000, aspectRatio: 0.75 },
+  { id: 'portfolio-03', title: 'Unsinkable Study', altText: 'Illustration study for The Unsinkable by Fred Koehler', filename: 'Unsinkable-1-v2.jpg', src: '/assets/portfolio/Unsinkable-1-v2.jpg', width: 1000, height: 1432, aspectRatio: 1000 / 1432 },
+  { id: 'portfolio-04', title: 'Selected Artwork 04', altText: 'Selected children’s book illustration by Fred Koehler, portfolio artwork 04', filename: 'Untitled_Artwork-45.jpg', src: '/assets/portfolio/Untitled_Artwork-45.jpg', width: 1000, height: 750, aspectRatio: 1000 / 750 },
+  { id: 'portfolio-05', title: 'Selected Artwork 05', altText: 'Selected children’s book illustration by Fred Koehler, portfolio artwork 05', filename: 'Untitled_Artwork-27.jpg', src: '/assets/portfolio/Untitled_Artwork-27.jpg', width: 1500, height: 969, aspectRatio: 1500 / 969 },
+  { id: 'portfolio-06', title: 'Selected Artwork 06', altText: 'Selected children’s book illustration by Fred Koehler, portfolio artwork 06', filename: 'Untitled_Artwork-28.jpg', src: '/assets/portfolio/Untitled_Artwork-28.jpg', width: 1500, height: 664, aspectRatio: 1500 / 664 },
+  { id: 'portfolio-07', title: 'Working Process Study', altText: 'Children’s book illustration process study by Fred Koehler', filename: 'working-2.jpg', src: '/assets/portfolio/working-2.jpg', width: 1500, height: 750, aspectRatio: 2 },
+  { id: 'portfolio-08', title: 'Selected Artwork 08', altText: 'Selected children’s book illustration by Fred Koehler, portfolio artwork 08', filename: 'Untitled_Artwork-13.jpg', src: '/assets/portfolio/Untitled_Artwork-13.jpg', width: 1500, height: 667, aspectRatio: 1500 / 667 },
+  { id: 'portfolio-09', title: 'Selected Artwork 09', altText: 'Selected children’s book illustration by Fred Koehler, portfolio artwork 09', filename: 'Untitled_Artwork-9.jpg', src: '/assets/portfolio/Untitled_Artwork-9.jpg', width: 1000, height: 985, aspectRatio: 1000 / 985 },
+  { id: 'portfolio-10', title: 'Studio Drawing Sheet A', altText: 'Studio drawing sheet of children’s book character studies by Fred Koehler', filename: 'SKM_C300i26051814030.jpg', src: '/assets/portfolio/SKM_C300i26051814030.jpg', width: 2932, height: 3090, aspectRatio: 2932 / 3090 },
+  { id: 'portfolio-11', title: 'Studio Drawing Sheet B', altText: 'Studio drawing sheet of children’s book character studies by Fred Koehler', filename: 'SKM_C300i26051814060.jpg', src: '/assets/portfolio/SKM_C300i26051814060.jpg', width: 1998, height: 3268, aspectRatio: 1998 / 3268 },
+  { id: 'portfolio-12', title: 'Selected Artwork 12', altText: 'Selected children’s book illustration by Fred Koehler, portfolio artwork 12', filename: '9.jpg', src: '/assets/portfolio/9.jpg', width: 6475, height: 3325, aspectRatio: 6475 / 3325 },
+  { id: 'portfolio-13', title: 'Selected Artwork 13', altText: 'Selected children’s book illustration by Fred Koehler, portfolio artwork 13', filename: '010.jpg', src: '/assets/portfolio/010.jpg', width: 5700, height: 2850, aspectRatio: 2 },
+  { id: 'portfolio-14', title: 'Selected Artwork 14', altText: 'Selected children’s book illustration by Fred Koehler, portfolio artwork 14', filename: '7.jpg', src: '/assets/portfolio/7.jpg', width: 5550, height: 2850, aspectRatio: 5550 / 2850 },
+  { id: 'portfolio-15', title: 'Selected Artwork 15', altText: 'Selected children’s book illustration by Fred Koehler, portfolio artwork 15', filename: '8.jpg', src: '/assets/portfolio/8.jpg', width: 6150, height: 2850, aspectRatio: 6150 / 2850 },
+  { id: 'portfolio-16', title: 'Selected Artwork 16', altText: 'Selected children’s book illustration by Fred Koehler, portfolio artwork 16', filename: '2.jpg', src: '/assets/portfolio/2.jpg', width: 1000, height: 422, aspectRatio: 1000 / 422 },
+  { id: 'portfolio-17', title: 'Selected Artwork 17', altText: 'Selected children’s book illustration by Fred Koehler, portfolio artwork 17', filename: '1.jpg', src: '/assets/portfolio/1.jpg', width: 1000, height: 422, aspectRatio: 1000 / 422 },
+  { id: 'portfolio-18', title: 'Selected Artwork 18', altText: 'Selected children’s book illustration by Fred Koehler, portfolio artwork 18', filename: '4.jpg', src: '/assets/portfolio/4.jpg', width: 2500, height: 1250, aspectRatio: 2 },
+  { id: 'portfolio-19', title: 'Selected Artwork 19', altText: 'Selected children’s book illustration by Fred Koehler, portfolio artwork 19', filename: '5.jpg', src: '/assets/portfolio/5.jpg', width: 2500, height: 1250, aspectRatio: 2 },
+  { id: 'portfolio-20', title: 'Selected Artwork 20', altText: 'Selected children’s book illustration by Fred Koehler, portfolio artwork 20', filename: '6.jpg', src: '/assets/portfolio/6.jpg', width: 2500, height: 1250, aspectRatio: 2 },
+  { id: 'portfolio-21', title: 'Selected Artwork 21', altText: 'Selected children’s book illustration by Fred Koehler, portfolio artwork 21', filename: '3.jpg', src: '/assets/portfolio/3.jpg', width: 2500, height: 1250, aspectRatio: 2 },
 ]
 
 export const WIP_PROJECTS: WipProject[] = [

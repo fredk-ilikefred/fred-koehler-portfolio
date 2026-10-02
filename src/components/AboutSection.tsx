@@ -8,7 +8,8 @@ export const AboutSection: React.FC = () => {
           <div className="about-photo-frame">
             <img
               src="/assets/about/fred-koehler-headshot.jpg"
-              alt="Portrait photo of Fred Koehler"
+              alt="Black-and-white portrait of children’s book author and illustrator Fred Koehler"
+              title="Fred Koehler — children’s book author and illustrator"
               className="about-photo-img"
               width={1711}
               height={1711}
