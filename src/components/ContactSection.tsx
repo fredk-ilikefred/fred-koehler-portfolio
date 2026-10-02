@@ -245,7 +245,7 @@ export const ContactSection: React.FC = () => {
             <textarea
               id="contact-message"
               className="form-textarea"
-              placeholder="How can Fred help?"
+              placeholder="Type your message here…"
               value={contactMessage}
               onChange={(e) => setContactMessage(e.target.value)}
               disabled={contactSending}

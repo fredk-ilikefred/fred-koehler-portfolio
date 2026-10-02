@@ -282,9 +282,6 @@ img {
 .about-bio-closer {
   font-size: 0.9rem;
   color: var(--color-ink-soft);
-  border-top: 1px dashed var(--color-rule);
-  padding-top: 0.85rem;
-  margin-top: 0.35rem;
 }
 
 /* BUTTONS */
@@ -575,8 +572,9 @@ img {
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
-  max-width: 900px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
 }
 
 /* NEWSLETTER OPT-IN */
