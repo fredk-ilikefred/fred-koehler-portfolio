@@ -548,6 +548,80 @@ img {
   border: 1px solid var(--color-rule);
   border-radius: 2px;
   padding: clamp(1.75rem, 3.5vw, 2.75rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* NEWSLETTER OPT-IN */
+.newsletter-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.newsletter-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.newsletter-kicker,
+.form-kicker {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-seafoam);
+}
+
+.newsletter-title,
+.inquiry-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+}
+
+.newsletter-desc {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--color-ink-muted);
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.newsletter-input-group {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.newsletter-input {
+  flex: 1;
+}
+
+.newsletter-btn {
+  flex-shrink: 0;
+  padding: 0.75rem 1.6rem;
+}
+
+.contact-divider {
+  height: 1px;
+  background-color: var(--color-rule);
+  width: 100%;
+}
+
+.direct-inquiry-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
 .form-grid {

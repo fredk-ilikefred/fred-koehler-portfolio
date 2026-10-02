@@ -2,10 +2,18 @@ import React, { useState } from 'react'
 
 export const ContactSection: React.FC = () => {
   const [formSent, setFormSent] = useState(false)
+  const [newsletterEmail, setNewsletterEmail] = useState('')
+  const [newsletterSubscribed, setNewsletterSubscribed] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleContactSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setFormSent(true)
+  }
+
+  const handleNewsletterSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    if (!newsletterEmail) return
+    setNewsletterSubscribed(true)
   }
 
   return (
@@ -87,7 +95,47 @@ export const ContactSection: React.FC = () => {
         </aside>
 
         <div className="contact-form-stage">
-          <form className="form-grid" onSubmit={handleSubmit} noValidate>
+          {/* Mailing List Opt-In */}
+          <div className="newsletter-block">
+            <div className="newsletter-header">
+              <span className="newsletter-kicker">Mailing List</span>
+              <h3 className="newsletter-title">Stay in the Loop</h3>
+              <p className="newsletter-desc">
+                Occasional studio news, new artwork, and upcoming book releases. No spam, ever.
+              </p>
+            </div>
+            <form className="newsletter-form" onSubmit={handleNewsletterSubmit} noValidate>
+              <div className="newsletter-input-group">
+                <input
+                  type="email"
+                  className="form-input newsletter-input"
+                  placeholder="Enter your email address…"
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
+                  required
+                  aria-label="Email address for mailing list"
+                />
+                <button type="submit" className="btn btn-primary newsletter-btn">
+                  Sign Up
+                </button>
+              </div>
+              {newsletterSubscribed && (
+                <span className="form-status-note" role="status">
+                  ✓ You’re on the list! (Preview mode)
+                </span>
+              )}
+            </form>
+          </div>
+
+          <div className="contact-divider" aria-hidden="true" />
+
+          {/* Direct Inquiry Form */}
+          <div className="direct-inquiry-header">
+            <span className="form-kicker">Direct Inquiry</span>
+            <h3 className="inquiry-title">Send a Message</h3>
+          </div>
+
+          <form className="form-grid" onSubmit={handleContactSubmit} noValidate>
             <div className="form-group">
               <label htmlFor="contact-name" className="form-label">Name</label>
               <input
@@ -111,16 +159,6 @@ export const ContactSection: React.FC = () => {
             </div>
 
             <div className="form-group full-width">
-              <label htmlFor="contact-reason" className="form-label">I want to talk about…</label>
-              <select id="contact-reason" className="form-select" defaultValue="art-direction">
-                <option value="school-visit">School Visit / Assembly / Workshop</option>
-                <option value="art-direction">Editor &amp; Art Director Inquiry / Commission</option>
-                <option value="rights">Rights Available / Project Acquisition</option>
-                <option value="fan-mail">Fan Mail / General Question</option>
-              </select>
-            </div>
-
-            <div className="form-group full-width">
               <label htmlFor="contact-message" className="form-label">Message</label>
               <textarea
                 id="contact-message"
@@ -129,7 +167,7 @@ export const ContactSection: React.FC = () => {
                 required
               ></textarea>
               <span className="form-help">
-                Early prototype front-end preview · Form submissions are not hooked up yet.
+                Ready for Google Form integration · Submissions will connect to your designated Google Sheet.
               </span>
             </div>
 
@@ -139,7 +177,7 @@ export const ContactSection: React.FC = () => {
               </button>
               {formSent && (
                 <span className="form-status-note" role="status">
-                  ✓ Preview notice: Form interface confirmed (submission backend not connected).
+                  ✓ Message sent! (Preview mode)
                 </span>
               )}
             </div>
