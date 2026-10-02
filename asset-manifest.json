@@ -5,7 +5,7 @@
     "folderUrl": "https://drive.google.com/drive/folders/10J184IuOfNq08eZz6_l0IW5xoLB58uIh?usp=drive_link",
     "handling": "Immutable source files: downloaded byte-for-byte for responsive display only; never modified, retouched, upscaled, recolored, or used with image-generation/editing tools."
   },
-  "assetCount": 37,
+  "assetCount": 38,
   "assets": [
     {
       "id": "1aMHJ1HIMWiURXhsnitHANH5raHG8gH65",
@@ -561,6 +561,21 @@
         "format": "GIF"
       },
       "integrity": "Original user-supplied asset; no modification or AI processing applied."
+    },
+    {
+      "id": "user-upload-koehler-headshot",
+      "sourceName": "koehler-headshot(1).jpg",
+      "localPath": "public/assets/about/fred-koehler-headshot.jpg",
+      "section": "about",
+      "displayTitle": "Fred Koehler portrait headshot",
+      "byteSize": 913240,
+      "sha256": "9bb61a76c2affe91df1296e1c52564d7f07868270d3433df855a44e16dab31c3",
+      "dimensions": {
+        "width": 1711,
+        "height": 1711,
+        "format": "JPEG"
+      },
+      "integrity": "User-supplied original headshot uploaded directly; no AI generation, upscaling, or retouching applied."
     }
   ]
 }

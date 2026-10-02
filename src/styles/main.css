@@ -203,6 +203,90 @@ img {
   aspect-ratio: 1300 / 354;
 }
 
+/* ABOUT FRED SECTION */
+.about-section {
+  border-bottom: 1px solid var(--color-rule);
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 340px) 1fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+
+.about-photo-frame {
+  width: 100%;
+  background-color: #EFE9DC;
+  border: 1px solid var(--color-rule);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(28, 26, 24, 0.05);
+}
+
+.about-photo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.about-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.about-subhead-kicker {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-seafoam);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.about-statement-block {
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 3px solid var(--color-seafoam);
+}
+
+.about-statement-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.02rem, 1.45vw, 1.18rem);
+  font-weight: 600;
+  line-height: 1.62;
+  color: var(--color-ink);
+  font-style: normal;
+}
+
+.about-bio-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  font-size: 0.96rem;
+  line-height: 1.68;
+  color: var(--color-ink-muted);
+}
+
+.about-bio-body em {
+  font-style: italic;
+}
+
+.about-bio-closer {
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+  border-top: 1px dashed var(--color-rule);
+  padding-top: 0.85rem;
+  margin-top: 0.35rem;
+}
+
 /* BUTTONS */
 .btn {
   display: inline-flex;
@@ -483,66 +567,6 @@ img {
   color: var(--color-ink-muted);
 }
 
-.contact-layout {
-  display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: clamp(2rem, 4.5vw, 4rem);
-  align-items: start;
-}
-
-.author-bio-card {
-  background-color: #FFFFFF;
-  border: 1px solid var(--color-rule);
-  border-radius: 2px;
-  padding: 1.75rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.author-bio-header {
-  border-bottom: 1px solid var(--color-rule);
-  padding-bottom: 0.85rem;
-}
-
-.author-bio-kicker {
-  font-family: var(--font-display);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-seafoam);
-  display: block;
-  margin-bottom: 0.35rem;
-}
-
-.author-bio-name {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--color-ink);
-}
-
-.author-bio-body {
-  font-size: 0.9rem;
-  line-height: 1.62;
-  color: var(--color-ink-muted);
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.author-bio-body em {
-  font-style: italic;
-}
-
-.author-bio-closer {
-  font-size: 0.85rem;
-  color: var(--color-ink-soft);
-  border-top: 1px dashed var(--color-rule);
-  padding-top: 0.75rem;
-}
-
 .contact-form-stage {
   background-color: #FFFFFF;
   border: 1px solid var(--color-rule);
@@ -551,6 +575,8 @@ img {
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* NEWSLETTER OPT-IN */
@@ -849,8 +875,12 @@ img {
 
 /* RESPONSIVE BREAKPOINTS */
 @media (max-width: 1024px) {
-  .contact-layout {
+  .about-layout {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-photo-col {
+    max-width: 320px;
   }
 }
 

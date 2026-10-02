@@ -26,7 +26,6 @@ export const ContactSection: React.FC = () => {
     setContactError(null)
 
     try {
-      // Send as text/plain to avoid CORS preflight issues with Google Apps Script
       const payload = JSON.stringify({
         formType: 'contact',
         name: contactName.trim(),
@@ -57,7 +56,6 @@ export const ContactSection: React.FC = () => {
       }
     } catch (err: unknown) {
       console.error('Contact submission error:', err)
-      // Fallback: If CORS blocks JSON reading, Google still processes the POST request.
       setContactSuccess(true)
       setContactName('')
       setContactEmail('')
@@ -162,144 +160,119 @@ export const ContactSection: React.FC = () => {
         </article>
       </div>
 
-      <div className="contact-layout">
-        <aside className="author-bio-card" aria-label="About Fred Koehler">
-          <div className="author-bio-header">
-            <span className="author-bio-kicker">About the Author &amp; Illustrator</span>
-            <h3 className="author-bio-name">Fred Koehler</h3>
-          </div>
-          <div className="author-bio-body">
-            <p>
-              Fred Koehler is an artist, novelist, and screenwriter whose real-life misadventures include
-              sunken boats, shark encounters, and narrow escapes from hurricanes. Whether freediving in the
-              Gulf of Mexico or backpacking across Africa, Fred’s sense of adventure and awe of nature overflow
-              into his characters’ stories.
-            </p>
-            <p>
-              His published works include the illustrated novel <em>Garbage Island</em>, the Boston Globe-Horn Book
-              honoree <em>One Day, The End</em>, and the New York Public Library Best of the Year{' '}
-              <em>Flashlight Night</em>, among others.
-            </p>
-            <p className="author-bio-closer">
-              Fred lives in Florida with his wife, kids, and a rescue dog named Cheerio Mutt-Face McChubbybutt.
+      <div className="contact-form-stage">
+        {/* Mailing List Opt-In */}
+        <div className="newsletter-block">
+          <div className="newsletter-header">
+            <span className="newsletter-kicker">Mailing List</span>
+            <h3 className="newsletter-title">Stay in the Loop</h3>
+            <p className="newsletter-desc">
+              Occasional studio news, new artwork, and upcoming book releases. No spam, ever.
             </p>
           </div>
-        </aside>
-
-        <div className="contact-form-stage">
-          {/* Mailing List Opt-In */}
-          <div className="newsletter-block">
-            <div className="newsletter-header">
-              <span className="newsletter-kicker">Mailing List</span>
-              <h3 className="newsletter-title">Stay in the Loop</h3>
-              <p className="newsletter-desc">
-                Occasional studio news, new artwork, and upcoming book releases. No spam, ever.
-              </p>
-            </div>
-            <form className="newsletter-form" onSubmit={handleNewsletterSubmit} noValidate>
-              <div className="newsletter-input-group">
-                <input
-                  type="email"
-                  className="form-input newsletter-input"
-                  placeholder="Enter your email address…"
-                  value={newsletterEmail}
-                  onChange={(e) => setNewsletterEmail(e.target.value)}
-                  disabled={newsletterSending}
-                  required
-                  aria-label="Email address for mailing list"
-                />
-                <button
-                  type="submit"
-                  className="btn btn-primary newsletter-btn"
-                  disabled={newsletterSending}
-                >
-                  {newsletterSending ? 'Signing Up…' : 'Sign Up'}
-                </button>
-              </div>
-              {newsletterSuccess && (
-                <span className="form-status-note" role="status">
-                  ✓ Thank you! You’re on the list.
-                </span>
-              )}
-              {newsletterError && (
-                <span className="form-error-note" role="alert">
-                  {newsletterError}
-                </span>
-              )}
-            </form>
-          </div>
-
-          <div className="contact-divider" aria-hidden="true" />
-
-          {/* Direct Inquiry Form */}
-          <div className="direct-inquiry-header">
-            <span className="form-kicker">Direct Inquiry</span>
-            <h3 className="inquiry-title">Send a Message</h3>
-          </div>
-
-          <form className="form-grid" onSubmit={handleContactSubmit} noValidate>
-            <div className="form-group">
-              <label htmlFor="contact-name" className="form-label">Name</label>
+          <form className="newsletter-form" onSubmit={handleNewsletterSubmit} noValidate>
+            <div className="newsletter-input-group">
               <input
-                id="contact-name"
-                type="text"
-                className="form-input"
-                placeholder="Jane Doe"
-                value={contactName}
-                onChange={(e) => setContactName(e.target.value)}
-                disabled={contactSending}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="contact-email" className="form-label">Email</label>
-              <input
-                id="contact-email"
                 type="email"
-                className="form-input"
-                placeholder="jane@example.com"
-                value={contactEmail}
-                onChange={(e) => setContactEmail(e.target.value)}
-                disabled={contactSending}
+                className="form-input newsletter-input"
+                placeholder="Enter your email address…"
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
+                disabled={newsletterSending}
                 required
+                aria-label="Email address for mailing list"
               />
-            </div>
-
-            <div className="form-group full-width">
-              <label htmlFor="contact-message" className="form-label">Message</label>
-              <textarea
-                id="contact-message"
-                className="form-textarea"
-                placeholder="How can Fred help?"
-                value={contactMessage}
-                onChange={(e) => setContactMessage(e.target.value)}
-                disabled={contactSending}
-                required
-              ></textarea>
-            </div>
-
-            <div className="form-actions full-width">
               <button
                 type="submit"
-                className="btn btn-primary"
-                disabled={contactSending}
+                className="btn btn-primary newsletter-btn"
+                disabled={newsletterSending}
               >
-                {contactSending ? 'Sending…' : 'Send Message'}
+                {newsletterSending ? 'Signing Up…' : 'Sign Up'}
               </button>
-              {contactSuccess && (
-                <span className="form-status-note" role="status">
-                  ✓ Message sent! Thanks for reaching out.
-                </span>
-              )}
-              {contactError && (
-                <span className="form-error-note" role="alert">
-                  {contactError}
-                </span>
-              )}
             </div>
+            {newsletterSuccess && (
+              <span className="form-status-note" role="status">
+                ✓ Thank you! You’re on the list.
+              </span>
+            )}
+            {newsletterError && (
+              <span className="form-error-note" role="alert">
+                {newsletterError}
+              </span>
+            )}
           </form>
         </div>
+
+        <div className="contact-divider" aria-hidden="true" />
+
+        {/* Direct Inquiry Form */}
+        <div className="direct-inquiry-header">
+          <span className="form-kicker">Direct Inquiry</span>
+          <h3 className="inquiry-title">Send a Message</h3>
+        </div>
+
+        <form className="form-grid" onSubmit={handleContactSubmit} noValidate>
+          <div className="form-group">
+            <label htmlFor="contact-name" className="form-label">Name</label>
+            <input
+              id="contact-name"
+              type="text"
+              className="form-input"
+              placeholder="Jane Doe"
+              value={contactName}
+              onChange={(e) => setContactName(e.target.value)}
+              disabled={contactSending}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="contact-email" className="form-label">Email</label>
+            <input
+              id="contact-email"
+              type="email"
+              className="form-input"
+              placeholder="jane@example.com"
+              value={contactEmail}
+              onChange={(e) => setContactEmail(e.target.value)}
+              disabled={contactSending}
+              required
+            />
+          </div>
+
+          <div className="form-group full-width">
+            <label htmlFor="contact-message" className="form-label">Message</label>
+            <textarea
+              id="contact-message"
+              className="form-textarea"
+              placeholder="How can Fred help?"
+              value={contactMessage}
+              onChange={(e) => setContactMessage(e.target.value)}
+              disabled={contactSending}
+              required
+            ></textarea>
+          </div>
+
+          <div className="form-actions full-width">
+            <button
+              type="submit"
+              className="btn btn-primary"
+              disabled={contactSending}
+            >
+              {contactSending ? 'Sending…' : 'Send Message'}
+            </button>
+            {contactSuccess && (
+              <span className="form-status-note" role="status">
+                ✓ Message sent! Thanks for reaching out.
+              </span>
+            )}
+            {contactError && (
+              <span className="form-error-note" role="alert">
+                {contactError}
+              </span>
+            )}
+          </div>
+        </form>
       </div>
     </section>
   )
@@ -312,6 +285,7 @@ export const Footer: React.FC = () => {
         <span className="footer-brand">Fred Koehler · Children’s Book Author &amp; Illustrator</span>
         <div className="footer-links">
           <a href="#hero">Back to Top ↑</a>
+          <a href="#about">About</a>
           <a href="#books">Books</a>
           <a href="#artwork">Artwork</a>
           <a href="#wip">Work in Progress</a>

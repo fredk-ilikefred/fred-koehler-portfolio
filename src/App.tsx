@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
+import { AboutSection } from './components/AboutSection'
 import { BooksShelf } from './components/BooksShelf'
 import { PortfolioGrid } from './components/PortfolioGrid'
 import { WipSection } from './components/WipSection'
@@ -46,6 +47,7 @@ export const App: React.FC = () => {
       <Header />
       <main className="main-content">
         <Hero />
+        <AboutSection />
         <BooksShelf />
         <PortfolioGrid onSelectPiece={handleSelectPiece} />
         <WipSection />

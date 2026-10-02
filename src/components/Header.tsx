@@ -17,10 +17,11 @@ export const Header: React.FC = () => {
         </a>
 
         <nav className="site-nav" aria-label="Primary Navigation">
+          <a href="#about">About</a>
           <a href="#books">Books</a>
           <a href="#artwork">Artwork</a>
           <a href="#wip">Work in Progress</a>
-          <a href="#contact">About &amp; Contact</a>
+          <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>

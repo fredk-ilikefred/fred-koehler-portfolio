@@ -257,6 +257,13 @@
       "localPath": "public/assets/wip/the-unsinkable.jpg",
       "section": "wip",
       "displayTitle": "The Unsinkable artwork"
+    },
+    {
+      "id": "user-upload-koehler-headshot",
+      "sourceName": "koehler-headshot(1).jpg",
+      "localPath": "public/assets/about/fred-koehler-headshot.jpg",
+      "section": "about",
+      "displayTitle": "Fred Koehler portrait headshot"
     }
   ]
 }
